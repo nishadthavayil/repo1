@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * The contents of this file are subject to the terms of the Common Development and
+ * Distribution License (the License). You may not use this file except in compliance with the
+ * License.
+ *
+ * You can obtain a copy of the License at legal/CDDLv1.0.txt. See the License for the
+ * specific language governing permission and limitations under the License.
+ *
+ * When distributing Covered Software, include this CDDL Header Notice in each file and include
+ * the License file at legal/CDDLv1.0.txt. If applicable, add the following below the CDDL
+ * Header, with the fields enclosed by brackets [] replaced by your own identifying
+ * information: "Portions copyright [year] [name of copyright owner]".
+ *
+ * Copyright 2018 ForgeRock AS.
+ * 
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+  <!--   <parent>
+        <artifactId>auth-tree-node-parent</artifactId>
+        <groupId>org.forgerock.am</groupId>
+        <version>6.0.0</version>
+    </parent> -->
+    
+    
+
+    <artifactId>customAuthNode</artifactId>
+
+    <groupId>com.example</groupId>
+    <version>1.0.0-SNAPSHOT</version> 
+    <packaging>jar</packaging>   
+    <name>Template for an Auth Tree Node maven project</name>
+    <description>An Authentication Tree Node for ForgeRock's Identity Platform</description>
+    
+   <!--  <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>forgerock-private-releases</id>
+            <name>ForgeRock Private Release Repository</name>
+            <url>http://maven.forgerock.org/repo/private-releases</url>
+        </repository>
+    </repositories> -->
+    
+    <dependencies>
+   
+     
+     <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>auth-node-api</artifactId>
+            <version>6.0.0.5</version>
+             <scope>system</scope> 
+             <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\auth-node-api-6.0.0.5.jar</systemPath> 
+             
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-guice-core</artifactId>
+            <version>6.0.0.5</version>
+             <scope>system</scope> 
+             <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-guice-core-6.0.0.5.jar</systemPath> 
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-core</artifactId>
+			 <version>6.0.0.5</version>
+             <scope>system</scope> 
+             <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-core-6.0.0.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-scripting</artifactId>
+			 <version>6.0.0.5</version>
+             <scope>system</scope> 
+             <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-scripting-6.0.0.5.jar</systemPath>
+
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-devices</artifactId>
+			<version>6.0.0.5</version>
+             <scope>system</scope> 
+             <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-devices-6.0.0.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-monitoring-test-assertions</artifactId>
+            <version>6.0.0.5</version>
+            <scope>system</scope> 
+            <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-monitoring-core-6.0.0.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.commons</groupId>
+            <artifactId>forgerock-test-utils</artifactId>
+            <scope>system</scope>
+			<version>6.0.0.5</version>
+            <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\forgerock-test-utils-23.0.1.jar</systemPath>
+			
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-core</artifactId>
+			 <version>6.0.0.5</version>
+             <scope>system</scope> 
+             <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-core-6.0.0.5.jar</systemPath>
+            <type>test-jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-auth-hotp</artifactId>
+			<scope>system</scope>
+			<version>6.0.0.5</version>
+            <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-auth-hotp-6.0.0.5.jar</systemPath>
+
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-guice-test</artifactId>
+			<scope>system</scope>
+			<version>6.0.0.5</version>
+            <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-guice-core-6.0.0.5.jar</systemPath>
+			
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-push-notification</artifactId>
+			<scope>system</scope>
+			<version>6.0.0.5</version>
+            <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-push-notification-6.0.0.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.commons</groupId>
+            <artifactId>forgerock-oauth-core</artifactId>
+			<scope>system</scope>
+			<version>23.0.1</version>
+            <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\forgerock-oauth-core-23.0.1.jar</systemPath>
+
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.commons</groupId>
+            <artifactId>oauth-oauth2-client</artifactId>
+			<scope>system</scope>
+			<version>6.0.0.5</version>
+            <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\oauth-oauth2-client-23.0.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-auth-common</artifactId>
+			<scope>system</scope>
+			<version>6.0.0.5</version>
+            <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-auth-common-6.0.0.5.jar</systemPath>
+        </dependency>
+      
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>openam-auth-oauth2</artifactId>
+			<scope>system</scope>
+			<version>6.0.0.5</version>
+            <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\openam-oauth2-6.0.0.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.forgerock.am</groupId>
+            <artifactId>webhook-endpoint</artifactId>
+			<scope>system</scope>
+			<version>6.0.0.5</version>
+            <systemPath>C:\Users\tavayiln\apache-tomcat-9.0.64-windows-x64\apache-tomcat-9.0.64\webapps\openam\WEB-INF\lib\webhook-endpoint-6.0.0.5.jar</systemPath>
+        </dependency>
+    
+    </dependencies>
+    
+ <build>
+
+<plugins>
+
+<plugin>
+ <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-compiler-plugin</artifactId>
+  <version>3.5</version>
+  <configuration>
+   <source>1.8</source>
+   <target>1.8</target>
+  </configuration>
+ 
+</plugin>
+
+</plugins>
+
+</build>
+
+
+</project>
